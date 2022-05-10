@@ -1,0 +1,72 @@
+.caja{
+    background-color: var(--main-solid);
+    width: 100px;
+    height: 100px;
+}
+
+.container__cover{
+    width: 100%;
+    background-size: 100%;
+    background-position: right;
+    background-repeat: no-repeat;
+}
+
+.cover{
+    max-width: 1200px;
+    height: 100%;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container__cover .text{
+    max-width: 400px;
+    margin: 50px;
+    color: #fff;
+}
+
+.container__cover .text h1{
+    font-size: 36px;
+    font-weight: 600;
+}
+
+.container__cover .text p{
+    font-size: 18px;
+    margin-top: 40px;
+}
+
+.container__cover .text input{
+    padding: 18px 80px;
+    border: none;
+    font-size: 16px;
+    border-radius: 50px;
+    margin-top: 40px;
+    background: linear-gradient(to right, var(--shadow-gradient), var(--main-solid));
+    color: #fff;
+    cursor: pointer;
+    box-shadow: 1px 1px 30px -20px var(--shadow);
+    transition: all 300ms;
+}
+
+.container__cover .text input:hover{
+    box-shadow: 1px 1px 30px -6px var(--shadow);
+}
+
+
+.container__cover .svg img{
+    width: 400px;
+    margin: 50px;
+    animation: move-vector 4s linear infinite;
+}
+
+@keyframes move-vector {
+    0%{
+        transform: translateY(15px);
+    }50%{
+        transform: translateY(0px);
+    }100%{
+        transform: translateY(15px);
+    }
+}
+

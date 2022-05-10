@@ -1,1 +1,22 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700;1,900&display=swap');
+
 /* You can add global styles to this file, and also import other style files */
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Source Sans Pro', sans-serif;
+    box-sizing: border-box;
+    --main-solid: #2825f0;
+    --shadow: #504df5;
+    --shadow-gradient: #b6b2fa;
+    --main-solid-hover: #8410be;
+    
+    
+}
+ 
+body{
+    width: 100%;
+    background: linear-gradient(rgba(0,0,0,0.7), transparent), url("./assets/background1.jpg") no-repeat center center fixed;
+    background-size: cover;
+    min-height: 100vh;
+}

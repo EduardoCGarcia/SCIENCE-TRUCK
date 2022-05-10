@@ -1,0 +1,17 @@
+<!-- <div class="principal">
+    <div class="container__cards">
+        <app-card-divulgador  
+            [divulgador]="p" *ngFor="let p of divulgadores"
+            (eventoDivulgador)="divulgador=$event" //esto forma parte del output
+            de este modo a una variable del componente padre le asignamos lo que emite el evento 
+            pero no sirve cuando no tenemos un componente padre y uno hijo
+        ></app-card-divulgador>
+    </div>
+</div> -->
+<div class="principal">
+    <div class="container__cards">
+        <app-card-divulgador [divulgador]="p" *ngFor="let p of divulgadores" ></app-card-divulgador>
+    </div>
+</div>
+
+

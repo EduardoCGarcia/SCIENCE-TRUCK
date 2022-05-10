@@ -1,0 +1,22 @@
+<!-- <div class="card">
+    <div class="cover">
+        <img src="{{divulgador.foto}}" alt="">
+        <div class="img__back"></div>
+    </div>
+    <div class="description">
+        <h2>{{divulgador.nombre}}</h2>
+        <p>{{divulgador.descripcion}}</p>
+        <input type="button" value="Leer Más" routerLink="divulgador/{{divulgador.nombre}}" (click)="emitirDivulgador()" //esto lanza el evento para compartir el valor con el componente padre  >
+    </div>
+</div> -->
+<div class="card">
+    <div class="cover">
+        <img src="{{divulgador.foto}}" alt="">
+        <div class="img__back"></div>
+    </div>
+    <div class="description">
+        <h2>{{divulgador.nombre}}</h2>
+        <p>{{divulgador.descripcion}}</p>
+        <input type="button" value="Leer Más" routerLink="divulgador/{{divulgador.nombre}}" (click)="emitirDivulgador()" >
+    </div>
+</div>
