@@ -13,6 +13,24 @@ export class HeaderComponent implements OnInit {
     headerTransparent();
   }
 
+  mostrar_menu(){
+    const nav = document.getElementById("nav")!;
+    const background_menu = document.getElementById("back_menu")!;
+    const icon = document.getElementById("btn_menu")!;
+    nav.style.right = "0px";
+    background_menu.style.display = "block";
+    icon.style.display = "none";
+  }
+
+  ocultar_menu(){
+    const nav = document.getElementById("nav")!;
+    const background_menu = document.getElementById("back_menu")!;
+    const icon = document.getElementById("btn_menu")!;
+    icon.style.display = "flex";
+    nav.style.right = "-250px";
+    background_menu.style.display = "none";
+}
+
 }
 
 function headerTransparent() {
@@ -28,3 +46,4 @@ function headerTransparent() {
     }
 })
 }
+

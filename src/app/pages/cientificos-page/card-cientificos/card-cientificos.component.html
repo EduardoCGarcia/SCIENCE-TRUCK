@@ -1,0 +1,11 @@
+<div class="card">
+    <div class="cover">
+        <img src="{{cientifico.foto_card}}" alt="">
+        <div class="img__back"></div>
+    </div>
+    <div class="description">
+        <h2>{{cientifico.nombre}}</h2>
+        <p>{{cientifico.descripcion}}</p>
+        <input type="button" value="Leer Más" routerLink="cientifico/{{cientifico.nombre}}" (click)="emitirCientifico()">
+    </div>
+</div>

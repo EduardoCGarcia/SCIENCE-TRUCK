@@ -1,15 +1,16 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { CientificoComponent } from './cientifico/cientifico.component';
-import { CientificosComponent } from './cientificos.component';
+import { CientificosPageComponent } from './cientificos-page.component';
 
 const routes: Routes = [
-  { path: '', component: CientificosComponent },
+  { path: '', component: CientificosPageComponent },
   { path: 'cientifico/:var', component: CientificoComponent }
+
 ];
 
 @NgModule({
   imports: [RouterModule.forChild(routes)],
   exports: [RouterModule]
 })
-export class CientificosRoutingModule { }
+export class CientificosPageRoutingModule { }

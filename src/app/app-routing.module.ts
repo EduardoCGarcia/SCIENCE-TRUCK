@@ -7,10 +7,10 @@ import { SabiasqueComponent } from './pages/sabiasque/sabiasque.component';
 
 const routes: Routes = [
   { path:"inicio", component:InicioComponent},
+  { path: 'divulgadores', loadChildren: () => import('./pages/divulgadores-page/divulgadores-page.module').then(m => m.DivulgadoresPageModule) },
+  { path: 'cientificos', loadChildren: () => import('./pages/cientificos-page/cientificos-page.module').then(m => m.CientificosPageModule) },
   { path:"entretenimiento", component:EntretenimientoComponent},
   { path:"sabias-que", component:SabiasqueComponent},
-  { path: 'cientificos', loadChildren: () => import('./pages/cientificos/cientificos.module').then(m => m.CientificosModule) },
-  { path: 'divulgadores', loadChildren: () => import('./pages/divulgadores-page/divulgadores-page.module').then(m => m.DivulgadoresPageModule) },
   { path:'**',redirectTo:'inicio', pathMatch:'full'}
 ];
 

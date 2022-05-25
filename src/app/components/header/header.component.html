@@ -1,10 +1,18 @@
+
 <header>
+  
   <div class="container__menu">
     <div class="logo">
       <img src="./assets/logoSienceTruck.png" class="logo" />
     </div>
     <div class="menu">
-      <nav>
+      <i class="fas fa-bars" id="btn_menu" (click)="mostrar_menu()"></i>
+      <div id="back_menu"  (click)="ocultar_menu()"></div>
+      <nav id="nav">
+        <div class="logo__menu">
+          <img src="./assets/logoSienceTruck.png" />
+        </div>
+        
         <ul>
           <li><a href="#" routerLink="inicio" id="selected">inicio</a></li>
           <li><a href="#" routerLink="divulgadores">divulgadores</a></li>

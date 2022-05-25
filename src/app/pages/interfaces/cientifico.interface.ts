@@ -1,9 +1,10 @@
 export interface Cientifico{
-    /* Estos son los campos que voy a mostrar  */
     id: number;
     nombre: string;
-    foto: string;
+    foto_card: string;
+    foto_inicio: string;
+    foto_pres: string;
     descripcion: number;
-    biografia: string;
+    informacion: string;
     sobre_mi: string;
 }

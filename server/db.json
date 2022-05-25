@@ -3,26 +3,60 @@
       {
         "id": 1,
         "nombre": "Carl Edward Sagan",
-        "foto": "https://i0.wp.com/www.hablandodeciencia.com/articulos/wp-content/uploads/sagan.png?resize=158%2C242&ssl=1",
-        "descripcion": "Astrónomo, astrofísico y cosmólogo Carl Edward Sagan (1934-1996), divulgador de ciencia."
+        "foto_card": "https://i0.wp.com/www.hablandodeciencia.com/articulos/wp-content/uploads/sagan.png?resize=158%2C242&ssl=1",
+        "foto_inicio": "https://scontent.fmex26-1.fna.fbcdn.net/v/t39.30808-6/274742283_4880653712022386_3607729822895785946_n.jpg?_nc_cat=108&ccb=1-6&_nc_sid=8bfeb9&_nc_eui2=AeEhSWorPfZG9BSfBmS_YwPT7gVU4vXmnZ3uBVTi9eadnd9T8LwgBJ2tRUxKi72m0PuPQzCFg_0mv_QnQyDZlvby&_nc_ohc=UQNHGKUAvNYAX-N_Hl_&_nc_ht=scontent.fmex26-1.fna&oh=00_AT_rXqnvi9VSXHg_Jc86U_530Hmo3VGteR2FuR0m29TvOQ&oe=6285AB03",
+        "descripcion": "Astrónomo, astrofísico y cosmólogo Carl Edward Sagan (1934-1996), divulgador de ciencia.",
+        "informacion": "(Nueva York, 1934-Seattle, EE UU, 1996) Astrónomo estadounidense. Cursó estudios en la Universidad de Chicago, donde se doctoró en astronomía y astrofísica en 1960. Posteriormente fue profesor de la Universidad de Berkeley, de la Universidad de Harvard y, a partir de 1968, de la Cornell University. En 1970 fue nombrado director del Centro de Estudios Planetarios. Colaborador habitual de la NASA, ideó los mensajes radiotelegráficos enviados por las sondas Pioneer 10 y 11 al espacio exterior para contactar con posibles civilizaciones extraterrestres. Contrario a la proliferación del arsenal nuclear, de cuyos peligros advirtió, fue un prolífico escritor de ciencia ficción, y en 1978 fue galardonado con el Premio Pulitzer por su obra Los dragones del Edén: especulaciones sobre la evolución de la inteligencia humana, si bien adquirió fama y popularidad por su obra Cosmos, que en 1980 fue convertida en serie televisiva y constituyó un éxito mundial."
       },
       {
         "id": 2,
         "nombre": "Javier Santaolalla Camino",
-        "foto": "https://festivaldelasideas.mx/wp-content/uploads/Javier-800-x-800-600x600.png",
-        "descripcion": "Javier Santaolalla Camino, doctor en física de partículas y licenciado en ingeniería de telecomunicaciones, divulgador de ciencia."
+        "foto_card": "https://festivaldelasideas.mx/wp-content/uploads/Javier-800-x-800-600x600.png",
+        "foto_inicio": "https://scontent.fmex26-1.fna.fbcdn.net/v/t39.30808-6/280926297_545101673646004_3102630436935335023_n.jpg?_nc_cat=101&ccb=1-6&_nc_sid=730e14&_nc_eui2=AeGTE-PIGNFyenv4LGwk2WinV5WrZLkC7n9XlatkuQLuf1DQIrKhyfElNoph--odYtiH_xQuWftKx1cVbH_D7VtV&_nc_ohc=PdVusXQMKqUAX-5wkvX&_nc_ht=scontent.fmex26-1.fna&oh=00_AT8TJzFTfa9WzUHfNezjbnx5fJrtJWYPwzw5obYVtWk6YQ&oe=6286F4B3",
+        "descripcion": "Javier Santaolalla Camino, doctor en física de partículas y licenciado en ingeniería de telecomunicaciones, divulgador de ciencia.",
+        "informacion": "Nací físico, y me hice ingeniero, primera contradicción. Burgalés y canario, científico y artista, practico el arte de abarcar mucho y apretar lo que se puede. Viajo mucho, hago deporte, me encantan mi familia y mis amigos, pero como igual esto te importa más bien poco, te cuento lo que sé hacer. Ingeniero de telecomunicaciones por la ULPGC, con experiencia laboral en satélites en la agencia del espacio francesa (CNES). Me titulé en física estudiando los veranos mientras mis amigos iban a la playa. Obtuve un máster en física fundamental investigando con una beca del CIEMAT en el CERN. Estuve investigando 4 años en física de partículas en el mayor laboratorio del mundo, participando en el descubrimiento de una nueva partícula, el bosón de Higgs. Todo ello en 9 años y sin usar poderes cuánticos. Tras doctorarme en física de partículas ahora me dedico a hablar de lo que más me apasiona, la física. Hago espectáculos científicos, soy colaborador en un programa de ciencia en la TV nacional, he escrito 7 libros y tengo una trilogía de canales de Youtube: Date un Voltio, Date un Vlog y Date un Mí. Y lo mejor de todo es que encima me pagan por hacerlo."
       },
       {
         "id": 3,
         "nombre": "José Luis Crespo Cepeda",
-        "foto": "https://pbs.twimg.com/profile_images/1342152259359137792/BX1YBK2E_400x400.jpg",
-        "descripcion": "José Luis Crespo es físico, fundador y director de Quantum Fracture."
+        "foto_card": "https://pbs.twimg.com/profile_images/1342152259359137792/BX1YBK2E_400x400.jpg",
+        "foto_inicio": "https://scontent.fmex26-1.fna.fbcdn.net/v/t1.6435-9/164809831_2233924916741831_5092482458164020190_n.jpg?_nc_cat=105&ccb=1-6&_nc_sid=730e14&_nc_eui2=AeGRdexngXVlQwvvqmq2PsE0b1pzSC_opMhvWnNIL-ikyIWdRb-dFPGvKQuedvtsdKbIRe081XMEZW6kixpNwxiG&_nc_ohc=IaQSULO_5HkAX8vmV4g&tn=p1S9j3to6z-P3GIN&_nc_ht=scontent.fmex26-1.fna&oh=00_AT9BlMZfrGTttxht4sSlXMN5tfkbnev8tUfOMAGeCsv2XA&oe=62A68316",
+        "descripcion": "José Luis Crespo es físico, fundador y director de Quantum Fracture.",
+        "informacion": "Fundador de «Quantum Fracture», un canal de animaciones que se dedica a mostrar lo increíblemente loco (y cuántico) que es el Universo. Actualmente el canal de YouTube tiene alrededor de un millón y medio de suscriptores y más de 84 millones de visitas, siendo uno de los más importantes de la divulgación científica de habla hispana. Crespo ha formado parte del personal de divulgación del Instituto de Física Teórica de Madrid y ha sido colaborador en el programa de televisión «Órbita Laika»."
       },
       {
         "id": 4,
         "nombre": "Sandra Ortonobes",
-        "foto": "https://www.cccb.org/rcs_gene/Sandra-Hiperactina_webCCCB.jpg",
-        "descripcion": "Graduada en Ciencias Biomédicas por la Universidad de Barcelona y Máster en Comunicación Científica por la Universidad Pompeu Fabra. Creadora del canal de YouTube «La Hiperactina» sobre divulgación y biomedicina y co-creadora de «Tres pies al gato», un podcast en el que se plantean y resuelven preguntas científicas en diez minutos."
+        "foto_card": "https://www.cccb.org/rcs_gene/Sandra-Hiperactina_webCCCB.jpg",
+        "foto_inicio": "https://scontent.fmex26-1.fna.fbcdn.net/v/t39.30808-6/261316009_102580452266394_4810947030681977502_n.jpg?_nc_cat=108&ccb=1-6&_nc_sid=730e14&_nc_eui2=AeFBCu9stAOVIIbhid9VoBbNUx3Tq1EpzF9THdOrUSnMX5zjAqbBsNq6ap6afY6KL1e7x21YXzRMKpf0IU8S5CbT&_nc_ohc=zR6qJGE_Ea4AX8BlieQ&_nc_ht=scontent.fmex26-1.fna&oh=00_AT8_v9Lxh6H3dbLu4mREIReuv3vadkxS4plGe4b--IG4mg&oe=6285EE61",
+        "descripcion": "Graduada en Ciencias Biomédicas por la Universidad de Barcelona y Máster en Comunicación Científica por la Universidad Pompeu Fabra. Creadora del canal de YouTube «La Hiperactina» sobre divulgación y biomedicina y co-creadora de «Tres pies al gato», un podcast en el que se plantean y resuelven preguntas científicas en diez minutos.",
+        "informacion": "Sandra Ortonobes Lara (@lahiperactina) es comunicadora y youtuber científica. Se ha graduado en Ciencias Biomédicas y ha estudiado el Máster en Comunicación Científica, Médica y Ambiental de la UPF. Es la creadora del canal de YouTube La hiperactina sobre divulgación y biomedicina. Ha colaborado en el programa A Ciencia Cierta de CV Radio y coproduce el podcast Tres Pies Al Gato junto a Ignacio Crespo (@SdeStendhal), en el que se plantean y resuelven preguntas científicas de forma breve, dinámica y divertida. Su objetivo es dedicarse a la divulgación científica, no sólo explicando ciencia, sino haciendo que la gente la apoye, la entienda, y sobre todo, se apasione por ella. Sandra Ortonobes está convencida que las personas merecen la divulgación, porque además de ser una fuente de curiosidad e inspiración, es una fuente información de rigor que sirve como herramienta para la toma de decisiones y de escepticismo ante las pseudociencias."
+      }
+    ],
+    "cientificos": [
+      {
+        "id": 2,
+        "nombre": "Javier Santaolalla Camino",
+        "foto_card": "https://festivaldelasideas.mx/wp-content/uploads/Javier-800-x-800-600x600.png",
+        "foto_inicio": "https://scontent.fmex26-1.fna.fbcdn.net/v/t39.30808-6/280926297_545101673646004_3102630436935335023_n.jpg?_nc_cat=101&ccb=1-6&_nc_sid=730e14&_nc_eui2=AeGTE-PIGNFyenv4LGwk2WinV5WrZLkC7n9XlatkuQLuf1DQIrKhyfElNoph--odYtiH_xQuWftKx1cVbH_D7VtV&_nc_ohc=PdVusXQMKqUAX-5wkvX&_nc_ht=scontent.fmex26-1.fna&oh=00_AT8TJzFTfa9WzUHfNezjbnx5fJrtJWYPwzw5obYVtWk6YQ&oe=6286F4B3",
+        "descripcion": "Javier Santaolalla Camino, doctor en física de partículas y licenciado en ingeniería de telecomunicaciones, divulgador de ciencia.",
+        "informacion": "Nací físico, y me hice ingeniero, primera contradicción. Burgalés y canario, científico y artista, practico el arte de abarcar mucho y apretar lo que se puede. Viajo mucho, hago deporte, me encantan mi familia y mis amigos, pero como igual esto te importa más bien poco, te cuento lo que sé hacer. Ingeniero de telecomunicaciones por la ULPGC, con experiencia laboral en satélites en la agencia del espacio francesa (CNES). Me titulé en física estudiando los veranos mientras mis amigos iban a la playa. Obtuve un máster en física fundamental investigando con una beca del CIEMAT en el CERN. Estuve investigando 4 años en física de partículas en el mayor laboratorio del mundo, participando en el descubrimiento de una nueva partícula, el bosón de Higgs. Todo ello en 9 años y sin usar poderes cuánticos. Tras doctorarme en física de partículas ahora me dedico a hablar de lo que más me apasiona, la física. Hago espectáculos científicos, soy colaborador en un programa de ciencia en la TV nacional, he escrito 7 libros y tengo una trilogía de canales de Youtube: Date un Voltio, Date un Vlog y Date un Mí. Y lo mejor de todo es que encima me pagan por hacerlo."
+      },
+      {
+        "id": 3,
+        "nombre": "José Luis Crespo Cepeda",
+        "foto_card": "https://pbs.twimg.com/profile_images/1342152259359137792/BX1YBK2E_400x400.jpg",
+        "foto_inicio": "https://scontent.fmex26-1.fna.fbcdn.net/v/t1.6435-9/164809831_2233924916741831_5092482458164020190_n.jpg?_nc_cat=105&ccb=1-6&_nc_sid=730e14&_nc_eui2=AeGRdexngXVlQwvvqmq2PsE0b1pzSC_opMhvWnNIL-ikyIWdRb-dFPGvKQuedvtsdKbIRe081XMEZW6kixpNwxiG&_nc_ohc=IaQSULO_5HkAX8vmV4g&tn=p1S9j3to6z-P3GIN&_nc_ht=scontent.fmex26-1.fna&oh=00_AT9BlMZfrGTttxht4sSlXMN5tfkbnev8tUfOMAGeCsv2XA&oe=62A68316",
+        "descripcion": "José Luis Crespo es físico, fundador y director de Quantum Fracture.",
+        "informacion": "Fundador de «Quantum Fracture», un canal de animaciones que se dedica a mostrar lo increíblemente loco (y cuántico) que es el Universo. Actualmente el canal de YouTube tiene alrededor de un millón y medio de suscriptores y más de 84 millones de visitas, siendo uno de los más importantes de la divulgación científica de habla hispana. Crespo ha formado parte del personal de divulgación del Instituto de Física Teórica de Madrid y ha sido colaborador en el programa de televisión «Órbita Laika»."
+      },
+      {
+        "id": 4,
+        "nombre": "Sandra Ortonobes",
+        "foto_card": "https://www.cccb.org/rcs_gene/Sandra-Hiperactina_webCCCB.jpg",
+        "foto_inicio": "https://scontent.fmex26-1.fna.fbcdn.net/v/t39.30808-6/261316009_102580452266394_4810947030681977502_n.jpg?_nc_cat=108&ccb=1-6&_nc_sid=730e14&_nc_eui2=AeFBCu9stAOVIIbhid9VoBbNUx3Tq1EpzF9THdOrUSnMX5zjAqbBsNq6ap6afY6KL1e7x21YXzRMKpf0IU8S5CbT&_nc_ohc=zR6qJGE_Ea4AX8BlieQ&_nc_ht=scontent.fmex26-1.fna&oh=00_AT8_v9Lxh6H3dbLu4mREIReuv3vadkxS4plGe4b--IG4mg&oe=6285EE61",
+        "descripcion": "Graduada en Ciencias Biomédicas por la Universidad de Barcelona y Máster en Comunicación Científica por la Universidad Pompeu Fabra. Creadora del canal de YouTube «La Hiperactina» sobre divulgación y biomedicina y co-creadora de «Tres pies al gato», un podcast en el que se plantean y resuelven preguntas científicas en diez minutos.",
+        "informacion": "Sandra Ortonobes Lara (@lahiperactina) es comunicadora y youtuber científica. Se ha graduado en Ciencias Biomédicas y ha estudiado el Máster en Comunicación Científica, Médica y Ambiental de la UPF. Es la creadora del canal de YouTube La hiperactina sobre divulgación y biomedicina. Ha colaborado en el programa A Ciencia Cierta de CV Radio y coproduce el podcast Tres Pies Al Gato junto a Ignacio Crespo (@SdeStendhal), en el que se plantean y resuelven preguntas científicas de forma breve, dinámica y divertida. Su objetivo es dedicarse a la divulgación científica, no sólo explicando ciencia, sino haciendo que la gente la apoye, la entienda, y sobre todo, se apasione por ella. Sandra Ortonobes está convencida que las personas merecen la divulgación, porque además de ser una fuente de curiosidad e inspiración, es una fuente información de rigor que sirve como herramienta para la toma de decisiones y de escepticismo ante las pseudociencias."
       }
     ],
     "categories": [
