@@ -18,17 +18,18 @@ export class CardDivulgadorComponent implements OnInit {
     ) { }
 
   ngOnInit(): void {
-  }
-  
-  /* 
-  // Evento que hara el cambio en la variable del componente padre
-  emitirDivulgador(){
+  } 
+   
+  /*Evento que hara el cambio en la variable del componente padre*/
+  /* emitirDivulgador(){
     this.eventoDivulgador.emit(this.divulgador);
   } */
 
   emitirDivulgador(){
     this.dataDivulgadorSvc.divulgador=this.divulgador;
-  } 
+  }  
 
-  
+
+
+
 }

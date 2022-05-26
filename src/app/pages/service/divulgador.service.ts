@@ -7,7 +7,14 @@ import { Divulgador } from '../interfaces/divulgador.interface';
   providedIn: 'root'
 })
 export class DivulgadorService {
-  private apiURL = 'http://localhost:3000/divulgadores';
+  /* private apiURL = 'http://localhost:3000/divulgadores';
+  constructor(private http: HttpClient) { }
+
+  getDivulgador():Observable<Divulgador[]  >{
+    return this.http.get<Divulgador[]>(this.apiURL)
+  } */
+  private apiURL = 'http://localhost:4000/api/Divulgadores/';
+  
   constructor(private http: HttpClient) { }
 
   getDivulgador():Observable<Divulgador[]  >{
