@@ -1,0 +1,110 @@
+Ejecutar
+npm init
+npm install -D nodemon
+npm install express mongoose dotenv
+----------------------------------------------
+crear index.js
+----------------------------------------------
+modificar scrots package.json
+"dev":  "nodemon ."
+----------------------------------------------
+
+Ejecutar
+npm run dev
+----------------------------------------------
+
+Dentro del index colocamos lo siguiente
+//creamos el servidor
+const express =  require('express');
+ 
+//Creamos el servidor
+const app = express();
+
+app.use(express.json())
+
+app.get('/', (req,res) =>{
+    res.send("Hola mundo"); //esto lo podemos ver en el localhost:4000
+})
+
+app.listen(4000, () => {
+    console.log("Backend works!");
+}); 
+----------------------------------------------
+Creamos el cluster para la base de datos
+Mongo atlas
+Abrir MongoDBCompass
+Dentro databases conectamos el cluster usando MongoDBCompass lo cual nos genera la siguiente url
+mongodb+srv://EduardoCGarcia:987456321@sciencetruck.gztly.mongodb.net
+
+Dentro de Network access añadimos una ip
+0.0.0.0/0
+esperamos hasta que status este en verde y active
+
+----------------------------------------------
+Ahora dentro de MongoDBCompass creamos la base de datos
+tambien aprovechamos para crear una coleccion 
+Listo!! hasta aqui ya tenemos la base de datos 
+
+----------------------------------------------
+Creamo archivo variables.env
+para conectar con la base de datos
+
+DB_MONGO = mongodb+srv://EduardoCGarcia:987456321@sciencetruck.gztly.mongodb.net/MEANST
+
+
+----------------------------------------------
+Crear carpeta config y un archivo db.js
+const mongoose = require("mongoose");
+require("dotenv").config({path: 'variables.env'});
+
+const conectarDB = async () => {
+    try {
+        await mongoose.connect(process.env.DB_MONGO, {
+            useNewUrlParser: true,
+            useUnifiedTopology: true
+            
+        })
+        console.log("Base de datos conectada");
+    } catch (error) {
+        console.log(error);
+        process.exit(1); //detenemos la app 
+    }
+}
+
+module.exports = conectarDB
+
+----------------------------------------------
+Dentro del index colocamos lo siguiente:
+conectarDB();
+justo despues de crear el servidor
+
+----------------------------------------------
+creamos la carpeta routes y el archivo divulgador.js
+
+/* 
+En este archivo se encuentras las rutas y los metodos 
+
+get
+post
+delet
+put
+
+etc
+
+*/
+
+const express = require('express');
+const router = express.Router(); 
+
+
+//Para poder 
+module.exports = router; 
+
+----------------------------------------------
+Creamos la carpeta controllers y el archivo divulgadorController.js
+
+
+
+----------------------------------------------
+Creamos la carpeta models y el archivo divulgador
+
