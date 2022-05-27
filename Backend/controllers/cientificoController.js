@@ -17,7 +17,6 @@ exports.getCientificos = async (req,res) => {
     try {
         const d = await Cientifico.find()
         res.json(d)
-        console.log(d);
     } catch (error) {
         console.log(error);
         res.status(500).send("Hubo un error");

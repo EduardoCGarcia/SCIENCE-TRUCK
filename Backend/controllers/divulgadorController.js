@@ -2,7 +2,7 @@ const Divulgador = require("../models/Divulgador");
 
 exports.postDivulgador = async (req,res) => {
     try {
-        let p;
+        let d;
         //Creamos nustro producto
         d = new Divulgador(req.body)
         await d.save();
@@ -17,7 +17,6 @@ exports.getDivulgadores = async (req,res) => {
     try {
         const d = await Divulgador.find()
         res.json(d)
-        console.log(d);
     } catch (error) {
         console.log(error);
         res.status(500).send("Hubo un error");
