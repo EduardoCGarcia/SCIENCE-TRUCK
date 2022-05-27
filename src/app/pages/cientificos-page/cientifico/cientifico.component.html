@@ -2,12 +2,20 @@
   <div class="container__cover">
     <div class="cover">
       <div class="text">
-        <h1>{{ data.cientifico.nombre}}</h1>
+        <h1>{{ data.cientifico.video}}</h1>
+        <p>{{data.cientifico.descripcion}}</p>
+        <br>
         <p>{{ data.cientifico.informacion }}</p>
+        
+
       </div>
       <div class="svg">
         <img src="{{ data.cientifico.foto_inicio }}" alt="" />
       </div>
     </div>
   </div>
+  <div class="video">
+    <app-youtube [video]="data.cientifico.video"></app-youtube>
+  </div>
+  
 </main>

@@ -1,0 +1,22 @@
+.main{
+    width: 100vw;
+    overflow: hidden;
+    background-color: aqua;
+}
+
+.video-box{
+    width: 100%;
+    min-width: 1020px;
+    height: auto;
+    margin: 100px auto 0;
+    background-color: rebeccapurple;
+}
+
+.video{
+    padding: 20px;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+

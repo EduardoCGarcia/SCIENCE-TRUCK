@@ -6,5 +6,5 @@ export interface Cientifico{
     foto_pres: string;
     descripcion: number;
     informacion: string;
-    sobre_mi: string;
+    video: string;
 }
