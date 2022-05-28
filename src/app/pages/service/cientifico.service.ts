@@ -11,7 +11,7 @@ export class CientificoService {
   private apiURL = 'http://localhost:4000/api/Cientificos/';
   constructor(private http: HttpClient) { }
 
-  getDivulgador():Observable<Cientifico[]  >{
+  getCientifico():Observable<Cientifico[]  >{
     return this.http.get<Cientifico[]>(this.apiURL)
   }
 }

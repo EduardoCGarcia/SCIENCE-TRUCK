@@ -5,7 +5,6 @@ import { DivulgadoresPageRoutingModule } from './divulgadores-page-routing.modul
 import { DivulgadoresPageComponent } from './divulgadores-page.component';
 import { CardDivulgadorComponent } from './card-divulgador/card-divulgador.component';
 import { DivulgadorComponent } from './divulgador/divulgador.component';
-import { CardComponent } from '../card/card.component';
 
 
 

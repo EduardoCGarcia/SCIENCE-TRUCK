@@ -14,7 +14,7 @@ export class CientificosPageComponent implements OnInit {
   constructor(private cientificosSvc: CientificoService) { }
 
   ngOnInit(): void {
-    this.cientificosSvc.getDivulgador()
+    this.cientificosSvc.getCientifico()
       .pipe(
         tap((cientificos: Cientifico[]) => this.cientificos = cientificos)
       )
