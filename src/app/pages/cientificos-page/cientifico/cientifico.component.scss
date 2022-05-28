@@ -5,6 +5,7 @@
     background-position: right;
     background-repeat: no-repeat;
     background-color: rgba(0, 0, 0, 0.568);
+    padding: 40px;
 }
 
 .cover{
@@ -17,9 +18,23 @@
 }
 
 .container__cover .text{
-    max-width: 800px;
+    max-width: 700px;
+    height: 78vh;
     margin: 50px;
     color: #fff;
+    overflow: scroll;
+    overflow-x: hidden;
+}
+
+/* Para el responsive del overflo-y: scroll necesitamos 3 propiedades */
+/*Ocultar scroll para Chrome, safari y Opera*/
+.container__cover .text::-webkit-scrollbar{
+	display: none;
+}
+/*Ocultar scroll para Chrome, safari y Opera*/
+.container__cover .text{
+	-ms-overflow-style: none;
+	scrollbar-width: none;
 }
 
 .container__cover .text h1{
@@ -41,6 +56,8 @@
     animation: move-vector 4s linear infinite;
 }
 
+
+
 @keyframes move-vector {
     0%{
         transform: translateY(15px);
@@ -49,4 +66,44 @@
     }100%{
         transform: translateY(15px);
     }
+}
+
+
+/*Haciendo la página Responsive*/
+
+
+
+@media screen and (max-width:1200px){
+
+    .container__cover{
+        background-position: -100px;
+    }
+
+
+}
+
+@media screen and (max-width: 1020px){
+
+    .container__cover .svg img{
+        display: none;
+    }
+
+    .container__cover .text{
+        max-width: 900px;
+        margin: 5px;
+        transition: all 500ms;
+    }
+
+}
+
+@media screen and (max-width: 650px){
+
+    .container__cover .text{
+        margin: 5px;
+    }
+
+    app-youtube{
+       
+    }
+
 }

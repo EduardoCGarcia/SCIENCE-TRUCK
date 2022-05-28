@@ -6,7 +6,7 @@ import { Divulgador } from '../interfaces/divulgador.interface';
   providedIn: 'root'
 })
 export class DataService {
-
+  videoYT!: String;
   divulgador!:Divulgador;
   cientifico!:Cientifico;
   
