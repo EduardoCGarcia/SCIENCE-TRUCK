@@ -8,6 +8,7 @@ const routes: Routes = [
   { path: 'divulgadores', loadChildren: () => import('./pages/divulgadores-page/divulgadores-page.module').then(m => m.DivulgadoresPageModule) },
   { path: 'cientificos', loadChildren: () => import('./pages/cientificos-page/cientificos-page.module').then(m => m.CientificosPageModule) },
   { path: 'productos', loadChildren: () => import('./pages/productos-page/productos-page.module').then(m => m.ProductosPageModule) },
+  { path: 'login', loadChildren: () => import('./pages/auth/login/login.module').then(m => m.LoginModule) },
   { path:'**',redirectTo:'inicio', pathMatch:'full'}
 ];
 
