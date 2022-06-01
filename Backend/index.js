@@ -16,7 +16,7 @@ app.use(express.json())
 app.use('/api/Divulgadores',require("./routes/divulgador"));
 app.use('/api/Cientificos',require("./routes/cientifico"));
 app.use('/api/Productos',require("./routes/producto"));
-
+app.use('/api/login',require("./routes/users"));
 
 
 app.listen(4000, () => {
