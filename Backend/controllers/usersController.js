@@ -1,11 +1,11 @@
-const { read } = require('fs');
 const User = require('../models/User');
 const service = require('../services/index')
 
 function singUp(req, res) {
     const user = new User({
         email: req.body.email,
-        displayName: req.body.displayName
+        displayName: req.body.displayName,
+        password: req.body.password
     })
     user.save((err) => {
         if (err) res.status(500).send({ message: `Error al guardar el usuario: ${err}` })
@@ -25,10 +25,6 @@ function singIn(req, res) {
         })
     })
 }
-
-
-
-
 
 
 module.exports = { singUp, singIn }

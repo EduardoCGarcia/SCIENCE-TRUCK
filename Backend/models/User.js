@@ -4,17 +4,17 @@ const crypto = require('crypto');
 
 
 const UserSchema = mongoose.Schema({
-    email: { type: String, unique: true, lowercase: true, required: true },
+    email: { type: String, unique: true, lowercase: true},
     displayName: String,
     avatar: String,
-    password: { type: String, delect: false, required: true },
+    password: { type: String, select: false},
     singupDate: { type: Date, default: Date.now() },
     lastLogin: Date
 });
 
 UserSchema.pre('save', (next) => {
     let user = this;
-    if (!user.isModified('password')) return next()
+    //if (!user.isModified('password')) return next()
 
     bycript.genSalt(10, (err, salt) =>{
         if(err) return next(err);
