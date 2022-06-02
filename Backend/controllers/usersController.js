@@ -7,10 +7,11 @@ function singUp(req, res) {
         displayName: req.body.displayName,
         password: req.body.password
     })
+
     user.save((err) => {
         if (err) res.status(500).send({ message: `Error al guardar el usuario: ${err}` })
 
-        return res.status(200).send({ token: service.createToken(user) })
+        return res.status(201).send({ token: service.createToken(user) })
     })
 }
 function singIn(req, res) {
