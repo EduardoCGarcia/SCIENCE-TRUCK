@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { AuthService } from '../../service/auth.service';
 
 @Component({
@@ -8,14 +9,16 @@ import { AuthService } from '../../service/auth.service';
 })
 export class LoginComponent implements OnInit {
 
-  constructor(private authSvc:AuthService ) { }
+  constructor(private authService: AuthService, private router: Router) { }
 
-  ngOnInit(): void {
-    const userData = {
-      userName: 'Eduardo',
-      password: "1234"
-    }
-    this.authSvc.login(userData).subscribe((res) => console.log("Login"));
+  ngOnInit() {
   }
 
+  onLogin(form:any): void {
+    //console.log("Login",form.value);
+    this.authService.login(form.value).subscribe(res => {
+      this.router.navigateByUrl('/inicio');
+    });
+    
+  }
 }
