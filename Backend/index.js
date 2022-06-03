@@ -9,6 +9,13 @@ const app = express();
 //Conecar a la base de datos
 conectarDB();
 
+const bodyParser = require('body-parser');
+const bodyParserJSON = bodyParser.json();
+const bodyParserURLEncoded = bodyParser.urlencoded({ extended: true });
+
+app.use(bodyParserJSON);
+app.use(bodyParserURLEncoded);
+
 app.use(cors());
 
 app.use(express.json())
@@ -16,7 +23,9 @@ app.use(express.json())
 app.use('/api/Divulgadores',require("./routes/divulgador"));
 app.use('/api/Cientificos',require("./routes/cientifico"));
 app.use('/api/Productos',require("./routes/producto"));
-app.use('/api/login',require("./routes/users"));
+
+
+app.use('/api/login',require("./routes/userRouter"));
 
 
 app.listen(4000, () => {
