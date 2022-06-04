@@ -1,8 +1,13 @@
-<main>
+<h1 *ngIf="(authSvc.isLogged | async) as user">
+    Welcome
+  </h1>
+  <p>home works!</p>
+  
+  <main>
     <div class="container__cover">
         <div class="cover">
             <div class="text">
-              <h1>SCIENCE TRUCK</h1>
+              <h1>WELCOME TO SCIENCE TRUCK</h1>
               <p>
                 El programa de divulgación científica de la Fundación Española para la
                 Ciencia y la Tecnología (FECYT), tiene como objetivo acercar la ciencia de
@@ -19,11 +24,6 @@
         </div>
     </div>
   </main>
-  
-  
-  <div class="caja"></div>
-  <div class="caja"></div>
-  <div class="caja"></div>
-  <div class="caja"></div>
-  <div class="caja"></div>
+
+
   

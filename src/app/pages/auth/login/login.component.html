@@ -13,13 +13,20 @@
           </div>
         </div>
         <p>or</p>
-        <form #frmLogin="ngForm" class="inputs-container" (ngSubmit)="onLogin(frmLogin)">
+        <form   class="inputs-container" [formGroup]="loginForm" (ngSubmit)="onLogin()">
+          <input class="input" type="email" formControlName="email" placeholder="Email" ngModel required/>
+          <input class="input" type="password" formControlName="password"  placeholder="Password" ngModel required />
+          <p>Forgot password? <span class="span">Click here</span></p>
+          <button class="btn" value="Send">login</button>
+          <p>Don't have an account? <span class="span" routerLink="/auth/register" >Sign Up</span></p>
+        </form>
+        <!-- <form #frmLogin="ngForm" class="inputs-container" (ngSubmit)="onLogin(frmLogin)">
           <input class="input" type="email"  name="email" placeholder="Email" ngModel required/>
           <input class="input" type="password" name="password"  placeholder="Password" ngModel required />
           <p>Forgot password? <span class="span">Click here</span></p>
           <button class="btn" value="Send">login</button>
           <p>Don't have an account? <span class="span" routerLink="/auth/register" >Sign Up</span></p>
-        </form>
+        </form> -->
       </div>
       <img class="image-container" src="../../../../assets/icons/login.svg" alt="" />
     </div>

@@ -1,6 +1,5 @@
 
 <header>
-  
   <div class="container__menu">
     <div class="logo">
       <img src="./assets/logoSienceTruck.png" class="logo" />
@@ -12,15 +11,27 @@
         <div class="logo__menu">
           <img src="./assets/logoSienceTruck.png" />
         </div>
-        
-        <ul>
-          <li><a href="#" routerLink="inicio">inicio</a></li>
-          <li><a href="#" routerLink="divulgadores">divulgadores</a></li>
-          <li><a href="#" routerLink="cientificos">Científicos</a></li>
-          <li><a href="#" routerLink="productos">productos</a></li>
-          <li><a href="#" routerLink="auth" id="selected">login</a></li>
-        </ul>
+        <ng-container >
+          <ul>
+            <!-- <li><a (click)="onLogout()">LogOut</a></li> -->
+            <li><a href="#" routerLink="inicio">inicio</a></li>
+            <li><a href="#" routerLink="divulgadores">divulgadores</a></li>
+            <li><a href="#" routerLink="cientificos">Científicos</a></li>
+            <li><a href="#" routerLink="productos">productos</a></li>
+            <li><a href="#" routerLink="auth" id="selected">login</a></li>
+          </ul>
+        </ng-container>
       </nav>
     </div>
   </div>
 </header>
+
+<ng-template #viewAdmin>
+  <ul>
+    <li><a href="#" routerLink="inicio">huevos</a></li>
+    <li><a href="#" routerLink="divulgadores">huevos</a></li>
+    <li><a href="#" routerLink="cientificos">huevos</a></li>
+    <li><a href="#" routerLink="productos">huevos</a></li>
+    <li><a href="#" routerLink="auth" id="selected">huevos</a></li>
+  </ul>
+</ng-template>

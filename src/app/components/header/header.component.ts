@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
+import { AuthService } from 'src/app/pages/service/auth.service';
 
 @Component({
   selector: 'app-header',
@@ -7,11 +8,36 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
 
-  constructor() { }
+  isAdmin = null;
+
+  @Output() toggle = new EventEmitter<void>();
+
+
+  constructor(public authSvc: AuthService) { 
+  }
 
   ngOnInit(): void {
     headerTransparent();
   }
+
+  onToggle(): void {
+    this.toggle.emit();
+  }
+
+  onLogout():void{
+    this.authSvc.logout();
+  }
+
+
+
+
+
+
+
+
+
+
+
 
   mostrar_menu(){
     const nav = document.getElementById("nav")!;

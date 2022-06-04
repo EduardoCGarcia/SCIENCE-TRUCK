@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { tap } from 'rxjs';
 import { Producto } from '../interfaces/producto.interface';
+import { AuthService } from '../service/auth.service';
 import { ProductoService } from '../service/producto.service';
 
 @Component({
@@ -11,7 +12,7 @@ import { ProductoService } from '../service/producto.service';
 export class ProductosPageComponent implements OnInit {
   productos !: Producto[];
   
-  constructor(private productosSvc: ProductoService) { }
+  constructor(private productosSvc: ProductoService, public authSvc:AuthService) { }
 
   ngOnInit(): void {
     this.productosSvc.getProducto()

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormBuilder } from '@angular/forms';
 import { Router } from '@angular/router';
 import { AuthService } from '../../service/auth.service';
 
@@ -8,16 +9,25 @@ import { AuthService } from '../../service/auth.service';
   styleUrls: ['./register.component.scss']
 })
 export class RegisterComponent implements OnInit {
-
-  constructor(private authService: AuthService, private router: Router) { }
+  registerForm = this.fb.group({
+    name:[''],
+    email: [''],
+    password: [''],
+  })
+  constructor(
+    private authSvc: AuthService,
+    private fb: FormBuilder,
+    private router: Router
+  ) { }
 
   ngOnInit(): void {
   }
 
-  onRegister(form:any): void {
-    this.authService.register(form.value).subscribe(res => {
-      this.router.navigateByUrl('/auth');
+
+  onRegister(): void {
+    const formValue = this.registerForm.value;
+    this.authSvc.register(formValue).subscribe(res => {
+      location.replace('/productos')
     });
-    
   }
 }

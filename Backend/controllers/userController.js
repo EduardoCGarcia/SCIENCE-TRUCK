@@ -3,7 +3,7 @@ const jwt = require('jsonwebtoken');
 const bcrypt = require('bcryptjs');
 const SECRET_KEY = 'secretkey123456';
 
-exports. createUser = (req, res, next) => {
+exports.createUser = (req, res, next) => {
   /*
   *newUser: usado para los datos que recuperados del frontend
    */
@@ -11,7 +11,8 @@ exports. createUser = (req, res, next) => {
   const newUser = {
     name: req.body.name,
     email: req.body.email,
-    password: bcrypt.hashSync(req.body.password)
+    password: bcrypt.hashSync(req.body.password),
+    role: "suscriptor"
   }
 
   User.create(newUser, (err, user) => {
@@ -25,6 +26,7 @@ exports. createUser = (req, res, next) => {
     const dataUser = {
       name: user.name,
       email: user.email,
+      role: user.role,
       accessToken: accessToken,
       expiresIn: expiresIn
     }
@@ -53,6 +55,7 @@ exports.loginUser = (req, res, next) => {
         const dataUser = {
           name: user.name,
           email: user.email,
+          role: user.role,
           accessToken: accessToken,
           expiresIn: expiresIn
         }
