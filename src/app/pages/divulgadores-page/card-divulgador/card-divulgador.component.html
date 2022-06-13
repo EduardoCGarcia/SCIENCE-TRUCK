@@ -1,22 +1,23 @@
-<!-- <div class="card">
+<ng-container *ngIf="!(authSvc.isLoggedAdmin | async) as user; else viewAdmin">
+  <div class="card">
     <div class="cover">
-        <img src="{{divulgador.foto}}" alt="">
-        <div class="img__back"></div>
+      <img src="{{ divulgador.foto_card }}" alt="" />
+      <div class="img__back"></div>
     </div>
     <div class="description">
-        <h2>{{divulgador.nombre}}</h2>
-        <p>{{divulgador.descripcion}}</p>
-        <input type="button" value="Leer Más" routerLink="divulgador/{{divulgador.nombre}}" (click)="emitirDivulgador()" //esto lanza el evento para compartir el valor con el componente padre  >
+      <h2>{{ divulgador.nombre }}</h2>
+      <p>{{ divulgador.descripcion }}</p>
+      <input type="button" value="Leer Más" routerLink="divulgador/{{ divulgador.nombre }}" (click)="emitirDivulgador()"
+      />
     </div>
-</div> -->
-<div class="card">
-    <div class="cover">
-        <img src="{{divulgador.foto_card}}" alt="">
-        <div class="img__back"></div>
-    </div>
-    <div class="description">
-        <h2>{{divulgador.nombre}}</h2>
-        <p>{{divulgador.descripcion}}</p>
-        <input type="button" value="Leer Más" routerLink="divulgador/{{divulgador.nombre}}" (click)="emitirDivulgador()" >
-    </div>
-</div>
+  </div>
+</ng-container>
+
+<ng-template #viewAdmin>
+  <p>
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis delectus
+    veniam, fugiat debitis inventore doloremque quidem ducimus aliquam sint
+    veritatis illum, modi labore sit necessitatibus itaque! Esse voluptatem
+    obcaecati aperiam.
+  </p>
+</ng-template>

@@ -15,7 +15,13 @@ const ProductoSchema = mongoose.Schema({
     imagen:{
         type: String,
         required: true
+    },
+    inCart:{ 
+        type: Boolean, 
+        default: false 
     }
+
+   
     
 });
 
