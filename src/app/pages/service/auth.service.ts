@@ -18,18 +18,25 @@ const helper = new JwtHelperService();
 export class AuthService {
 
   private loggedIn = new BehaviorSubject<boolean>(false);
+  //private isAdmin = new BehaviorSubject<boolean>(false);
 
-  private user = new BehaviorSubject<any>(null);
+  
+
   AUTH_SERVER: string = 'http://localhost:4000/api/auth';
   private token!: any;
 
   constructor(private http: HttpClient) {
     this.chackToken();
+    
   }
 
-  get isLogged(): Observable<boolean> {
+   get isLogged(): Observable<boolean> {
     return this.loggedIn.asObservable();
-  }
+  } 
+
+  /* get isLoggedAdmin(): Observable<boolean> {
+    return this.isAdmin.asObservable();
+  } */
 
   login(authData: User): Observable<UserResponse | void> {
     return this.http
@@ -38,7 +45,15 @@ export class AuthService {
         map((res: UserResponse) => {
           console.log('Res -> ', res);
           this.saveToken(res.dataUser.accessToken)
+          //this.isAdmin.next(false);
           this.loggedIn.next(true);
+          /* if(res.dataUser.role.toUpperCase() == 'ADMIN'){
+            this.isAdmin.next(true);
+            alert("Es un admin")
+          }else if(res.dataUser.role.toUpperCase() == 'SUSCRIPTOR'){
+            this.isAdmin.next(false);
+            alert("Es un subscriptro")
+          } */
           return res;
         }),
         catchError((err) => this.handlerError(err))
@@ -47,7 +62,8 @@ export class AuthService {
 
   logout(): void {
     localStorage.removeItem('token');
-    this.loggedIn.next(false);  
+    this.loggedIn.next(false); 
+    //this.isAdmin.next(false);
   }
 
   
@@ -55,9 +71,10 @@ export class AuthService {
     const userToken = localStorage.getItem('token');
     this.token =  userToken;
     const isExpired = helper.isTokenExpired(this.token);
-    //console.log("this.token   -> ", this.token);
+    console.log("this.token   -> ", this.token);
     console.log("isExpired   -> ", isExpired);
-    //Cuando el token sea valido devuelve false 
+    //Cuando el token sea valido devuelve false
+    
     isExpired ? this.logout() : this.loggedIn.next(true);
     
 
@@ -86,59 +103,6 @@ export class AuthService {
         catchError((err) => this.handlerError(err))
       );
   }
-
-
-
-
-
-  /* 
-    register(user: User): Observable<JwtResponse> {
-      return this.httpClient.post<JwtResponse>(`${this.AUTH_SERVER}/register`,
-        user).pipe(tap(
-          (res: JwtResponse) => {
-            if (res) {
-              // guardar token
-              this.saveToken(res.dataUser.accessToken, res.dataUser.expiresIn);
-            }
-          })
-        );
-    }
-    logout(): void {
-      this.token = '';
-      localStorage.removeItem("ACCESS_TOKEN");
-      localStorage.removeItem("EXPIRES_IN");
-      this.loggedIn.next(false);
-    }
-  
-    private saveToken(token: string, expiresIn: string): void {
-      localStorage.setItem("ACCESS_TOKEN", token);
-      localStorage.setItem("EXPIRES_IN", expiresIn);
-      this.token = token;
-    }
-  
-    private checckToken(): void{
-      const userToken = this.getToken();
-      const isExpired = helper.isTokenExpired(userToken);
-      console.log('isExpired 111 -> ', isExpired);
-      
-    }
-  
-    private getToken(): string {
-      if (!this.token) {
-        this.token != localStorage.getItem("ACCESS_TOKEN");
-      }
-      return this.token;
-    }
-  
-    private handlerError(err:Error): Observable<never> {
-      let errorMessage = 'An errror occured retrienving data';
-      if (err) {
-        errorMessage = `Error: code ${err.message}`;
-      }
-      window.alert(errorMessage);
-      return throwError(errorMessage);
-    } */
-
 
 
 }

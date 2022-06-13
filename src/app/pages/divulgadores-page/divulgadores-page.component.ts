@@ -1,6 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { tap } from 'rxjs';
 import { Divulgador } from '../interfaces/divulgador.interface';
+import { AuthService } from '../service/auth.service';
 import { DivulgadorService } from '../service/divulgador.service';
 
 @Component({
@@ -13,7 +14,9 @@ export class DivulgadoresPageComponent implements OnInit {
   
   //divulgador!:Divulgador; //es la variable en la que se guardara el valor que emita el componente hijo
 
-  constructor(private divulgadoresSvc: DivulgadorService) { }
+  constructor(
+    private divulgadoresSvc: DivulgadorService,
+    public authSvc:AuthService) { }
 
   ngOnInit(): void {
     this.divulgadoresSvc.getDivulgador()

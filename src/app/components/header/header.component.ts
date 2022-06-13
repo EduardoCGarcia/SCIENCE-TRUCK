@@ -1,5 +1,6 @@
 import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { AuthService } from 'src/app/pages/service/auth.service';
+import { DataService } from 'src/app/pages/service/data.service';
 
 @Component({
   selector: 'app-header',
@@ -8,12 +9,14 @@ import { AuthService } from 'src/app/pages/service/auth.service';
 })
 export class HeaderComponent implements OnInit {
 
-  isAdmin = null;
-
+  
   @Output() toggle = new EventEmitter<void>();
 
 
-  constructor(public authSvc: AuthService) { 
+  constructor(
+    public authSvc: AuthService,
+    public dataSvc:DataService
+    ) {
   }
 
   ngOnInit(): void {
@@ -25,7 +28,8 @@ export class HeaderComponent implements OnInit {
   }
 
   onLogout():void{
-    this.authSvc.logout();
+    this.authSvc.logout();  
+    location.replace('/auth')
   }
 
 

@@ -1,5 +1,6 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { Divulgador } from '../../interfaces/divulgador.interface';
+import { AuthService } from '../../service/auth.service';
 import { DataService } from '../../service/data.service';
 import { DivulgadorService } from '../../service/divulgador.service';
 
@@ -14,7 +15,8 @@ export class CardDivulgadorComponent implements OnInit {
   /*@Output() eventoDivulgador = new EventEmitter<Divulgador>() */
   constructor(
     public divulgadorSvc:DivulgadorService,
-    private dataDivulgadorSvc:DataService
+    private dataDivulgadorSvc:DataService,
+    public authSvc: AuthService
     ) { }
 
   ngOnInit(): void {

@@ -1,19 +1,20 @@
-
 <header>
   <div class="container__menu">
     <div class="logo">
       <img src="./assets/logoSienceTruck.png" class="logo" />
+      
     </div>
     <div class="menu">
       <i class="fas fa-bars" id="btn_menu" (click)="mostrar_menu()"></i>
-      <div id="back_menu"  (click)="ocultar_menu()"></div>
+      <div id="back_menu" (click)="ocultar_menu()"></div>
       <nav id="nav">
         <div class="logo__menu">
           <img src="./assets/logoSienceTruck.png" />
         </div>
-        <ng-container >
+        <ng-container
+          *ngIf="!(authSvc.isLogged | async) as user ; else viewAdmin"
+        >
           <ul>
-            <!-- <li><a (click)="onLogout()">LogOut</a></li> -->
             <li><a href="#" routerLink="inicio">inicio</a></li>
             <li><a href="#" routerLink="divulgadores">divulgadores</a></li>
             <li><a href="#" routerLink="cientificos">Científicos</a></li>
@@ -28,10 +29,9 @@
 
 <ng-template #viewAdmin>
   <ul>
-    <li><a href="#" routerLink="inicio">huevos</a></li>
-    <li><a href="#" routerLink="divulgadores">huevos</a></li>
-    <li><a href="#" routerLink="cientificos">huevos</a></li>
-    <li><a href="#" routerLink="productos">huevos</a></li>
-    <li><a href="#" routerLink="auth" id="selected">huevos</a></li>
+    <li><a href="#" routerLink="divulgadores">divulgadores</a></li>
+    <li><a href="#" routerLink="cientificos">Científicos</a></li>
+    <li><a href="#" routerLink="productos">productos</a></li>
+    <li><a href="#" routerLink="productos" id="selected" (click)="onLogout()">Logout</a></li>
   </ul>
 </ng-template>

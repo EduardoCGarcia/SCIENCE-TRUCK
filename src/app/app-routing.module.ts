@@ -9,7 +9,7 @@ const routes: Routes = [
   { path: 'cientificos', loadChildren: () => import('./pages/cientificos-page/cientificos-page.module').then(m => m.CientificosPageModule) },
   { path: 'productos', loadChildren: () => import('./pages/productos-page/productos-page.module').then(m => m.ProductosPageModule) },
   { path: 'auth', loadChildren: () => import('./pages/auth/auth.module').then(m => m.AuthModule), canActivate:[CheckLoginGuard]},
-  { path: 'inicio', loadChildren: () => import('./pages/home/home.module').then(m => m.HomeModule) },
+  { path: 'inicio', loadChildren: () => import('./pages/home/home.module').then(m => m.HomeModule), canActivate:[CheckLoginGuard] },
   { path:'**',redirectTo:'inicio', pathMatch:'full'}
 ];
 
