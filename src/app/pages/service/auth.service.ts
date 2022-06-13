@@ -18,7 +18,7 @@ const helper = new JwtHelperService();
 export class AuthService {
 
   private loggedIn = new BehaviorSubject<boolean>(false);
-  //private isAdmin = new BehaviorSubject<boolean>(false);
+  private isAdmin = new BehaviorSubject<boolean>(false);
 
   
 
@@ -34,9 +34,9 @@ export class AuthService {
     return this.loggedIn.asObservable();
   } 
 
-  /* get isLoggedAdmin(): Observable<boolean> {
+  get isLoggedAdmin(): Observable<boolean> {
     return this.isAdmin.asObservable();
-  } */
+  }
 
   login(authData: User): Observable<UserResponse | void> {
     return this.http
@@ -45,25 +45,36 @@ export class AuthService {
         map((res: UserResponse) => {
           console.log('Res -> ', res);
           this.saveToken(res.dataUser.accessToken)
+          this.saveLocalStorage(res.dataUser.role);
+          this.getRole();
           //this.isAdmin.next(false);
           this.loggedIn.next(true);
-          /* if(res.dataUser.role.toUpperCase() == 'ADMIN'){
+          if(res.dataUser.role.toUpperCase() == 'ADMIN'){
             this.isAdmin.next(true);
-            alert("Es un admin")
+            //alert("Es un admin")
           }else if(res.dataUser.role.toUpperCase() == 'SUSCRIPTOR'){
             this.isAdmin.next(false);
-            alert("Es un subscriptro")
-          } */
+            //alert("Es un subscriptro")
+          }
           return res;
         }),
         catchError((err) => this.handlerError(err))
       )
   }
 
+  getRole():boolean{
+    const role =localStorage.getItem('role')!;
+    //alert(role.toUpperCase()=="ADMIN")
+    return role.toUpperCase()=="ADMIN" ? true : false;
+  }
+
+
+
   logout(): void {
     localStorage.removeItem('token');
+    localStorage.removeItem('role');
     this.loggedIn.next(false); 
-    //this.isAdmin.next(false);
+    this.isAdmin.next(false);
   }
 
   
@@ -74,11 +85,24 @@ export class AuthService {
     console.log("this.token   -> ", this.token);
     console.log("isExpired   -> ", isExpired);
     //Cuando el token sea valido devuelve false
-    
-    isExpired ? this.logout() : this.loggedIn.next(true);
+    if(isExpired){
+      this.logout()
+    }else{
+      this.loggedIn.next(true);
+      if (this.getRole()) {
+        this.isAdmin.next(true);
+      }
+    }
+ 
     
 
   }
+
+  private saveLocalStorage(role: string): void {
+    localStorage.setItem('role', role);
+  }
+
+
   private saveToken(accessToken: string): void {
     localStorage.setItem('token', accessToken)
   }
