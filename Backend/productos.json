@@ -1,0 +1,117 @@
+[
+    {
+        "nombre": "Camisa de Albert Einstein",
+        "precio": 450,
+        "p_descuento": 15,
+        "imagen": "./assets/PRODUCTOS/CAlbert.jpg"
+    }
+    
+    ,
+
+    {
+        "nombre": "Taza protons",
+        "precio": 150,
+        "p_descuento": 10,
+        "imagen": "./assets/PRODUCTOS/tazaProtons.jpg"
+    }
+    
+    , 
+    
+    {
+        "nombre": "Gorra Ciencia",
+        "precio": 250,
+        "p_descuento": 25,
+        "imagen": "./assets/PRODUCTOS/gorraCiencia.jpg"
+    }
+    , 
+    
+    {
+        "nombre": "PlayeraILoveCiencia",
+        "precio": 250,
+        "p_descuento": 25,
+        "imagen": "./assets/PRODUCTOS/PlayeraILoveCiencia.jpg"
+    }
+    , 
+    
+    {
+        "nombre": "Pañalero de Bebé",
+        "precio": 100,
+        "p_descuento": 15,
+        "imagen": "./assets/PRODUCTOS/bebe.jpg"
+    }
+    , 
+    
+    {
+        "nombre": "Playera Manga Larga Bebé",
+        "precio": 150,
+        "p_descuento": 5,
+        "imagen": "./assets/PRODUCTOS/PlayeraMangaLargaBebe.jpg"
+    }
+    , 
+    
+    {
+        "nombre": "Llavero de ciencia",
+        "precio": 75,
+        "p_descuento": 10,
+        "imagen": "./assets/PRODUCTOS/llaverodeciencia.jpg"
+    }
+    , 
+    
+    {
+        "nombre": "Collar Colageno",
+        "precio": 250,
+        "p_descuento": 15,
+        "imagen": "./assets/PRODUCTOS/CollarColageno.jpg"
+    }
+    , 
+    
+    {
+        "nombre": "Collar Corzaon",
+        "precio": 150,
+        "p_descuento": 25,
+        "imagen": "./assets/PRODUCTOS/collarCiencia.jpg"
+    }
+    , 
+    
+    {
+        "nombre": "Pulcera Ciencia",
+        "precio": 250,
+        "p_descuento": 20,
+        "imagen": "./assets/PRODUCTOS/pulceraCiencia.jpg"
+    }
+    , 
+    
+    {
+        "nombre": "Bufanda de Ciencia",
+        "precio": 180,
+        "p_descuento": 25,
+        "imagen": "./assets/PRODUCTOS/BufandaCiencia.jpg"
+    }
+    , 
+    
+    {
+        "nombre": "Zapatos Toms Ciencia",
+        "precio": 480,
+        "p_descuento": 30,
+        "imagen": "./assets/PRODUCTOS/TomsCiencia.jpg"
+    }
+    , 
+    
+    {
+        "nombre": "Anillos Ciencia",
+        "precio": 325,
+        "p_descuento": 10,
+        "imagen": "./assets/PRODUCTOS/AnillosCiencia.jpg"
+    }
+    , 
+    
+    {
+        "nombre": "Aretes Ciencia",
+        "precio": 450,
+        "p_descuento": "30%",
+        "imagen": "./assets/PRODUCTOS/AretesCiencia.jpg"
+    }
+    
+
+
+]

@@ -104,7 +104,7 @@ export class AuthService {
 
 
   private saveToken(accessToken: string): void {
-    localStorage.setItem('token', accessToken)
+    localStorage.setItem('token', accessToken)  
   }
 
   private handlerError(err: any): Observable<never> {
