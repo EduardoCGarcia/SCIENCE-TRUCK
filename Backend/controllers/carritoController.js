@@ -65,22 +65,20 @@ exports.getProductsCart = async (req, res) => {
 };
 
 exports.deleteProductCart = async (req,res) => {
-  const { productId } = req.params;
-  
-  const productInCart = await Cart.findById(productId);
 
-  /* Buscamos el producto en nuestra DB por el nombre del que esta en el carrito */
+  const productInCart = await Cart.findOne(req.body)
+
   const { nombre, imagen, precio, p_descuento, _id } = await Producto.findOne({
     nombre: productInCart.nombre,
   });
 
-  /* Buscamos y eliminamos el producto con la id */
-  await Cart.findByIdAndDelete(productId);
+  await Cart.findOneAndDelete(productInCart);
 
   /* Buscamos y editamos la prop inCart: false */
   /* Le pasamos la id del producto en la DB */
   /* La prop a cambiar y las demas */
   /* Y el new para devolver el producto editado */
+  
   await Producto.findByIdAndUpdate(
     _id,
     { inCart: false, nombre, imagen, precio, p_descuento },
@@ -92,4 +90,5 @@ exports.deleteProductCart = async (req,res) => {
       });
     })
     .catch((error) => res.json({ mensaje: "Hubo un error" }));
+  
 }

@@ -19,7 +19,14 @@ export class MisProductosComponent implements OnInit {
   }
 
   eliminar():void{
-    alert(this.carrito.nombre);
+    if (confirm('¿Seguro que deseas eliminar este articulo de tu carrito?')) {
+      this.carritoSvc.deleteProducto().subscribe((data)=>{
+        location.reload();
+      }),((error:any)=>{
+        console.log(error);
+      })
+      
+    }
   }
 
 }

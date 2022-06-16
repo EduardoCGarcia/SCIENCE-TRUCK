@@ -16,4 +16,8 @@ export class MicarritoService {
   getCarrito():Observable<Carrito[]>{
     return this.http.get<Carrito[]>(this.apiURL)
   }
+
+  deleteProducto(){
+    return this.http.delete(this.apiURL);
+  }
 }
