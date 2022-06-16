@@ -13,7 +13,7 @@ export class MicarritoService {
 
   constructor(private http: HttpClient) { }
 
-  getCarrito():Observable<Producto[]>{
-    return this.http.get<Producto[]>(this.apiURL)
+  getCarrito():Observable<Carrito[]>{
+    return this.http.get<Carrito[]>(this.apiURL)
   }
 }

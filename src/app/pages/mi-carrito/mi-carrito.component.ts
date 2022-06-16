@@ -11,14 +11,14 @@ import { MicarritoService } from '../service/micarrito.service';
 })
 export class MiCarritoComponent implements OnInit {
 
-  carrito !:Producto[];
+  carrito !:Carrito[];
   
   constructor(public carritoSvc:MicarritoService) { }
 
   ngOnInit(): void {
     this.carritoSvc.getCarrito()
       .pipe(
-        tap((carrito: Producto[]) => this.carrito = carrito)
+        tap((carrito: Carrito[]) => this.carrito = carrito)
       )
       .subscribe()
   }

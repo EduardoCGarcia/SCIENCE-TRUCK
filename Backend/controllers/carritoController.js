@@ -22,7 +22,12 @@ exports.addProductCart = async (req, res) => {
 
     /* Si nos envian algo y no esta en el carrito lo agregamos */
   } else if (noEstaVacio && !estaEnElCarrito) {
-    const newProductInCart = new Cart({ nombre, imagen, precio, p_descuento, amount: 1 });
+    const c = new Cart({ nombre, imagen, amount: 1, p_descuento, precio});
+    console.log(c?._id);
+
+    c.save();
+    res.json({mensaje: `El producto fue agregado al carrito`});
+
 
     /* Y actualizamos la prop inCart: true en nuestros productos */
     await Producto.findByIdAndUpdate(
@@ -31,13 +36,12 @@ exports.addProductCart = async (req, res) => {
       { new: true }
     )
       .then((producto) => {
-        newProductInCart.save();
-        res.json({
-          mensaje: `El producto fue agregado al carrito`,
-          producto,
-        });
+        	
       })
       .catch((error) => console.error(error));
+
+
+     
 
     /* Y si esta en el carrito avisamos */
   } else if (estaEnElCarrito) {
@@ -45,6 +49,8 @@ exports.addProductCart = async (req, res) => {
       mensaje: "El producto ya esta en el carrito",
     });
   }
+
+
 };
 
 
@@ -57,3 +63,33 @@ exports.getProductsCart = async (req, res) => {
     res.status(500).send("Hubo un error");
   }
 };
+
+exports.deleteProductCart = async (req,res) => {
+  const { productId } = req.params;
+  
+  const productInCart = await Cart.findById(productId);
+
+  /* Buscamos el producto en nuestra DB por el nombre del que esta en el carrito */
+  const { nombre, imagen, precio, p_descuento, _id } = await Producto.findOne({
+    nombre: productInCart.nombre,
+  });
+
+  /* Buscamos y eliminamos el producto con la id */
+  await Cart.findByIdAndDelete(productId);
+
+  /* Buscamos y editamos la prop inCart: false */
+  /* Le pasamos la id del producto en la DB */
+  /* La prop a cambiar y las demas */
+  /* Y el new para devolver el producto editado */
+  await Producto.findByIdAndUpdate(
+    _id,
+    { inCart: false, nombre, imagen, precio, p_descuento },
+    { new: true }
+  )
+    .then((product) => {
+      res.json({
+        mensaje: `El producto ${product.nombre} fue eliminado del carrito`,
+      });
+    })
+    .catch((error) => res.json({ mensaje: "Hubo un error" }));
+}

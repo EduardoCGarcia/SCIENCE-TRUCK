@@ -11,11 +11,15 @@ import { MicarritoService } from '../../service/micarrito.service';
 })
 export class MisProductosComponent implements OnInit {
 
-  @Input() carrito !:Producto;
+  @Input() carrito !:Carrito;
 
   constructor(public carritoSvc:MicarritoService) { }
 
   ngOnInit(): void {
+  }
+
+  eliminar():void{
+    alert(this.carrito.nombre);
   }
 
 }

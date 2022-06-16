@@ -108,7 +108,7 @@
     {
         "nombre": "Aretes Ciencia",
         "precio": 450,
-        "p_descuento": "30%",
+        "p_descuento": 30,
         "imagen": "./assets/PRODUCTOS/AretesCiencia.jpg"
     }
     
