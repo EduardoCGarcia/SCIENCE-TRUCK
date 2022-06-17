@@ -69,8 +69,16 @@
     border: 1px solid black;
     border-radius: 25px;
   }
-  .estilo-c .add-cart:hover{
+  .estilo-c input:hover{
     color: black;
     background-color: transparent;
     border: 1px solid black;
+  }
+
+  .info-container input{
+    background-color: rgb(63, 83, 81);
+    padding: 15px;
+    border: 1px solid rgb(255, 255, 255);
+    border-radius: 25px;
+    color: white;
   }

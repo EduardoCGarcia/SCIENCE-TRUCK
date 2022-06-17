@@ -13,4 +13,5 @@ export class ProductoService {
   getProducto():Observable<Producto[]  >{
     return this.http.get<Producto[]>(this.apiURL)
   }
+  
 }

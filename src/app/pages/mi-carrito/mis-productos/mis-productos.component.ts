@@ -13,20 +13,22 @@ export class MisProductosComponent implements OnInit {
 
   @Input() carrito !:Carrito;
 
-  constructor(public carritoSvc:MicarritoService) { }
+  constructor(private carritoSvc:MicarritoService) { }
 
   ngOnInit(): void {
   }
 
   eliminar():void{
     if (confirm('¿Seguro que deseas eliminar este articulo de tu carrito?')) {
-      this.carritoSvc.deleteProducto().subscribe((data)=>{
+      this.carritoSvc.deleteProducto(this.carrito._id).subscribe((data)=>{
         location.reload();
       }),((error:any)=>{
         console.log(error);
       })
       
     }
+    
+    
   }
 
 }

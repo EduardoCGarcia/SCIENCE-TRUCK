@@ -17,7 +17,12 @@ export class MicarritoService {
     return this.http.get<Carrito[]>(this.apiURL)
   }
 
-  deleteProducto(){
-    return this.http.delete(this.apiURL);
+  deleteProducto(_id:string){
+    return this.http.delete(this.apiURL+_id);
+  }
+
+  addProducto(prod : Producto){
+    return this.http.post(this.apiURL,prod)
+    
   }
 }
